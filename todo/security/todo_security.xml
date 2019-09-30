@@ -18,6 +18,53 @@
 	        <field name="implied_ids" eval="[(4, ref('group_todo_user'))]"/>
 	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
 	  </record>
+	  
+	   
+	    <record id="todo_user_partner" model="res.partner">
+            <field name="name">Todo User</field>
+            <field name="email">demo.portal@yourcompany.example.com</field>
+            <field name="supplier" eval="False"/>
+            <field name="customer" eval="True"/>
+            <field name="city">Vivegnis</field>
+            <field name="zip">4683</field>
+            <field name="country_id" ref="base.be"/>
+            <field name="company_name">YourCompany</field>
+            <field name="street">Rue Cesar de Paepe, 43</field>
+        </record>
+         
+        
+	  <record id="user_demo_todo_user" model="res.users">
+            <field name="partner_id" ref="todo_user_partner"/> 
+            <field name="login">todo_user</field>
+            <field name="password">123456</field>
+            <field name="groups_id" eval="[(4,ref('group_todo_user'))]"/>
+      </record>
+        
+        
+        
+        <record id="todo_manager_partner" model="res.partner">
+            <field name="name">Todo Manager</field>
+            <field name="email">demo.portal@yourcompany.example.com</field>
+            <field name="supplier" eval="False"/>
+            <field name="customer" eval="True"/>
+            <field name="city">Vivegnis</field>
+            <field name="zip">4683</field>
+            <field name="country_id" ref="base.be"/>
+            <field name="company_name">YourCompany</field>
+            <field name="street">Rue Cesar de Paepe, 43</field>
+        </record>
+         
+        
+	  <record id="user_demo_todo_manager" model="res.users">
+            <field name="partner_id" ref="todo_manager_partner"/> 
+            <field name="login">todo_manager</field>
+            <field name="password">123456</field>
+            <field name="groups_id" eval="[(4,ref('group_todo_manager'))]"/>
+      </record>
+      
+      
+      
+        
 		  
 		   
 	<record model="ir.rule" id="user_todo_rule">

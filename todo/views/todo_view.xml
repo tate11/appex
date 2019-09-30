@@ -6,11 +6,11 @@
             <field name="arch" type="xml">
             	<form string="Todo">
 					  <header>
-                        <button type="object" string="Set To Draft" name="action_draft"  states="cancel" />
-                        <button type="object" string="Confirm" name="action_waiting_for_approval" states="draft" /> 
-                        <button type="object" string="Approved" name="action_approved" states="waiting_for_approval,rejected" groups="todo.group_todo_manager"/> 
-                        <button type="object" string="Rejected" name="action_rejected" states="waiting_for_approval,approved" groups="todo.group_todo_manager"/> 
-                        <button type="object" string="Cancel" name="action_cancel" states="approved,rejected" groups="todo.group_todo_manager"/>
+                        <button class="oe_highlight" type="object" string="Set To Draft" name="action_draft"  states="approved,rejected"  groups="todo.group_todo_manager"/>
+                        <button class="oe_highlight" type="object" string="Confirm" name="action_waiting_for_approval" states="draft" /> 
+                        <button class="oe_highlight" type="object" string="Approved" name="action_approved" states="waiting_for_approval,rejected" groups="todo.group_todo_manager"/> 
+                        <button class="oe_highlight" type="object" string="Rejected" name="action_rejected" states="waiting_for_approval,approved" groups="todo.group_todo_manager"/> 
+                        <!-- <button type="object" string="Cancel" name="action_cancel" states="approved,rejected" groups="todo.group_todo_manager"/> -->
                         <field name="state" widget="statusbar" />
                     </header>
                     
