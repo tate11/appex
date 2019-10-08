@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "tour_travel",
+    'name': "import_adj",
 
     'summary': """
-       tour travel is tour travel management""",
+        import_adj""",
 
     'description': """
-        tour travel is tour travel management efficient
+        import_adj
     """,
 
     'author': "My Company",
@@ -19,14 +19,21 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base',  'account', 'product', 'sale','crm','purchase','sale_crm'],
+    'depends': ['base', 'account', 'product', 'sale','crm','purchase','sale_crm', 'importexcel'],
+#     'depends': ['base','stock'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/action.xml',
+        'views/ir_model_fields_import.xml',
+        'views/ir_model_import.xml',
+        'views/model_gen.xml',
+        'views/fields_import.xml',
+        'views/model_import.xml',
+        'views/action_import.xml',
+        'views/menu_import.xml',
+        'views/view_import.xml',
         'views/menu.xml',
-        'views/view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

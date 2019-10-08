@@ -1,0 +1,2783 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* tour_travel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-08 02:51+0000\n"
+"PO-Revision-Date: 2019-10-08 02:51+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tour_travel
+#: model:mail.template,body_html:tour_travel.email_template_edi_hotel_reservation
+msgid "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello ${object.hotel_id.partner_id.name},</p>\n"
+"    \n"
+"    <p>Here is the Hotel Booking from ${object.company_id.name}: </p>\n"
+"\n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"       &nbsp;&nbsp;Order number: <strong>${object.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order date: ${object.date_order}<br />       \n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Booking%20${object.name}\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>\n"
+"    \n"
+"    <br/>\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"            ${object.company_id.street2}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.city or object.company_id.zip:\n"
+"            ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.country_id:\n"
+"            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"        % endif\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Xin chào ${object.hotel_id.partner_id.name},</p>\n"
+"    \n"
+"    <p>Đây là thông tin đặt phòng khách sạn từ ${object.company_id.name}: </p>\n"
+"\n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>THÔNG TIN CHUNG</strong><br />\n"
+"       &nbsp;&nbsp;Mã đơn hàng: <strong>${object.name}</strong><br />\n"
+"       &nbsp;&nbsp;Tổng tiền: <strong>${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Ngày đặt: ${object.date_order}<br />       \n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Booking%20${object.name}\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>\n"
+"    \n"
+"    <br/>\n"
+"    <p>Nếu bạn có bất kỳ câu hỏi nào, đừng ngại liên hệ với chúng tôi.</p>\n"
+"    <p>Cảm ơn vì đã chọn ${object.company_id.name or 'chúng tôi'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"            ${object.company_id.street2}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.city or object.company_id.zip:\n"
+"            ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.country_id:\n"
+"            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"        % endif\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Điện thoại:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_attendee_count
+msgid "# Attendees"
+msgstr "SL Tham dự"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_purchase_order_count
+msgid "# of Purchase Order"
+msgstr "SL đơn hàng"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_quotation_count
+msgid "# of Quotations"
+msgstr "SL của Báo giá"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_rfq_count
+msgid "# of RFQ"
+msgstr "Số lượng YCBG"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_booking_count
+msgid "# of Tour Bookings"
+msgstr "# của Đặt Tour"
+
+#. module: tour_travel
+#: model:mail.template,subject:tour_travel.email_template_edi_hotel_reservation
+msgid "${object.company_id.name} (Ref ${object.name or 'n/a' })"
+msgstr "${object.company_id.name} (Mã ${object.name or 'n/a' })"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "(update)"
+msgstr "(cập nhật)"
+
+#. module: tour_travel
+#: model:hotel.class,name:tour_travel.hotel_class_3star
+msgid "3 Star Hotel"
+msgstr "Khách sạn 3 sao"
+
+#. module: tour_travel
+#: model:hotel.class,name:tour_travel.hotel_class_4star
+msgid "4 Star Hotel"
+msgstr "Khách sạn 4 sao"
+
+#. module: tour_travel
+#: model:hotel.class,name:tour_travel.hotel_class_5star
+msgid "5 Star Hotel"
+msgstr "Khách sạn 5 sao"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<br/>							\n"
+"							<strong>Email:</strong>"
+msgstr "<br/>							\n"
+"							<strong>Email:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<br/>\n"
+"							<strong>2. Address:</strong>"
+msgstr "<br/>\n"
+"							<strong>2. Địa chỉ:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<br/>\n"
+"							<strong>4. Phone:</strong>"
+msgstr "<br/>\n"
+"							<strong>4. Điện thoại:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<br/>\n"
+"							<strong>Mobile:</strong>"
+msgstr "<br/>\n"
+"							<strong>Di động:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong style=\"font-size:18px\">1. Full Name:</strong>"
+msgstr "<strong style=\"font-size:18px\">1. Tên đầy đủ:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong>3. ID:</strong>"
+msgstr "<strong>3. Mã:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong>Birth date:</strong>"
+msgstr "<strong>Ngày sinh:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong>Expiry Date:</strong>"
+msgstr "<strong>Ngày hết hạn:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong>Gender:</strong>"
+msgstr "<strong>Giới tính:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong>Issue Date:</strong>"
+msgstr "<strong>Ngày đăng kí:</strong>"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "<strong>Passport Number:</strong>"
+msgstr "<strong>Số Hộ chiếu:</strong>"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_account_move
+msgid "Account Entry"
+msgstr "Bút toán kế toán"
+
+#. module: tour_travel
+#: model:document.type,description:tour_travel.document_type_3
+#: model:document.type,name:tour_travel.document_type_3
+msgid "Address Proof"
+msgstr "Hộ khẩu"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản quản trị"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Approve By Officer"
+msgstr "Phê duyệt bởi cán bộ"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: selection:passport.booking,state:0
+#: selection:visa.booking,state:0
+msgid "Approved"
+msgstr "Đã phê duyệt"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_attachment_ids
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_attachment_ids
+msgid "Attachment"
+msgstr "Đính kèm"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_attendee
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_partner_id
+msgid "Attendee"
+msgstr "Người tham gia"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.attendee_declaration
+#: model:ir.actions.report,name:tour_travel.attendee_declaration_report
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_form_view
+msgid "Attendee Declaration"
+msgstr "Tờ khai người tham gia"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_attendee_count
+#: model:ir.ui.view,arch_db:tour_travel.tour_booking_inherit_form
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_attendee_tree_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Attendees"
+msgstr "Người tham dự"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_auto_booking
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_auto_booking
+msgid "Auto booking"
+msgstr "Tự động đặt phòng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+#: selection:passport,state:0
+#: selection:visa,state:0
+msgid "Available"
+msgstr "Có hiệu lực"
+
+#. module: tour_travel
+#: model:document.type,description:tour_travel.document_type_1
+#: model:document.type,name:tour_travel.document_type_1
+msgid "Birth Certificate"
+msgstr "Giấy khai sinh"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Book"
+msgstr "Đặt phòng"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+msgid "Booked"
+msgstr "Đã đặt"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_qty_booked
+msgid "Booked Quantity"
+msgstr "Số lượng đã đặt"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_current_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_current_date
+msgid "Booking Date"
+msgstr "Ngày đặt"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_book_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_book_date
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+msgid "Booking Deadline"
+msgstr "Hạn chót đặt tour"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_name
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_name
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+msgid "Booking ID"
+msgstr "Mã đặt"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Booking Information"
+msgstr "Thông tin đặt"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_breakfast
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_breakfast
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_breakfast
+msgid "Breakfast included?"
+msgstr "Bao gồm ăn sáng?"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_crm_opportunity_report
+msgid "CRM Opportunity Analysis"
+msgstr "CRM Opportunity Analysis"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_form_view
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+#: selection:passport.booking,state:0
+#: selection:visa.booking,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: selection:tour.date,state:0
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_carrier_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_carrier_id
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_transport_line_id
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_transport_carrier_id
+#: model:ir.model.fields,field_description:tour_travel.field_transport_transport_line
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Carrier"
+msgstr "Hãng vận chuyển"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_carrier_line
+msgid "Carrier Line"
+msgstr "Chi tiết vận chuyển"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.transport_form_view
+msgid "Carriers Information"
+msgstr "Thông tin hãng vận chuyển"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_check_in_date
+msgid "Check In Date"
+msgstr "Ngày nhận phòng"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_check_out_date
+msgid "Check Out Date"
+msgstr "Ngày trả phòng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Check out"
+msgstr "Trả phòng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+msgid "Checked Out"
+msgstr "Đã trả phòng"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+msgid "Checked out"
+msgstr "Đã trả phòng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Child Products"
+msgstr "Sản phẩm đi kèm"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_city
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_city
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_city
+msgid "City"
+msgstr "Thành phố"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_code
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_name
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Code"
+msgstr "Mã"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:157
+#, python-format
+msgid "Compose Email"
+msgstr "Soạn email"
+
+#. module: tour_travel
+#: model:ir.ui.menu,name:tour_travel.menu_tour_travel_config
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: selection:passport.booking,state:0
+#: selection:visa.booking,state:0
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_is_ascii
+msgid "Convert to ASCII (English characters only)"
+msgstr "Chuyển thành ASCII (ký tự không dấu)"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_cost_price
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_cost_price
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_cost_price
+msgid "Cost Price"
+msgstr "Giá cả"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_cost_revenue
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Cost/Revenue"
+msgstr "Chi phí/Doanh thu"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_account_analytic
+#: model:ir.actions.act_window,name:tour_travel.tour_date_2_account_analytic_action
+msgid "Costs & Revenues"
+msgstr "Chi phí & Doanh thu"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,help:tour_travel.tour_date_2_account_analytic_action
+msgid "Costs will be created automatically when you register supplier\n"
+"					invoices, expenses or timesheets."
+msgstr "Giá vốn sẽ được tự động tạo khi bạn ghi nhận hóa đơn nhà cung\n"
+"					cấp, chi phí hoặc thời gian biểu."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_country_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_country_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_country_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_country_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_country_id
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_passport_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_transport_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_create_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_transport_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_create_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_currency_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_currency_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_currency_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_customer_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_customer_id
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "DESTINATIONS"
+msgstr "ĐIỂM ĐẾN"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_date_of_birth
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_date_of_birth
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_date_of_birth
+msgid "Date of Birth"
+msgstr "Ngày sinh"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Day"
+msgstr "Ngày"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_day
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_day
+msgid "Day #"
+msgstr "Số Ngày"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_tour_date_product_product_uom
+#: model:ir.model.fields,help:tour_travel.field_tour_product_product_uom
+msgid "Default Unit of Measure used for all stock operation."
+msgstr "Đơn vị đo mặc định dùng cho tất cả các hoạt động liên quan đến hàng tồn kho."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_departure
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_departure
+msgid "Departure"
+msgstr "Điểm khởi hành"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_start_date
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+msgid "Departure Date"
+msgstr "Ngày khởi hành"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Departure Date:"
+msgstr "Ngày khởi hành:"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Departure:"
+msgstr "Điểm khởi hành:"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_description
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_description
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_description
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_description
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_description
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_description
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_description
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_name
+#: model:ir.ui.view,arch_db:tour_travel.document_type_form_view
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+#: model:ir.ui.view,arch_db:tour_travel.tour_program_form_view
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_destination_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_destination_id
+msgid "Destination"
+msgstr "Điểm đến"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.destination_action
+#: model:ir.ui.menu,name:tour_travel.destination_menu
+#: model:ir.ui.view,arch_db:tour_travel.destination_tree_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Destinations"
+msgstr "Điểm đến"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_dinner
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_dinner
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_dinner
+msgid "Dinner included?"
+msgstr "Bao gồm ăn tối?"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_passport_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_report_tour_travel_report_attendee_declaration_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_transport_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_visa_display_name
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_distance
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_distance
+msgid "Distance (in Km)"
+msgstr "Khoảng cách (Km)"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_ids
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_ids
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Document Information"
+msgstr "Thông tin tài liệu"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.document_type_action
+#: model:ir.model,name:tour_travel.model_document_type
+#: model:ir.model.fields,field_description:tour_travel.field_ir_attachment_document_type_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_tour_document_type_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_tour_document_type_id
+#: model:ir.ui.menu,name:tour_travel.service_document_menu
+#: model:ir.ui.view,arch_db:tour_travel.document_type_form_view
+#: model:ir.ui.view,arch_db:tour_travel.document_type_tree_view
+msgid "Document Type"
+msgstr "Loại tài liệu"
+
+#. module: tour_travel
+#: model:tour.type,name:tour_travel.tour_type_domes
+msgid "Domestic"
+msgstr "Tour trong nước"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: selection:tour.date,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+#: selection:passport.booking,state:0
+#: selection:tour.date,state:0
+#: selection:visa.booking,state:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: tour_travel
+#: model:document.type,description:tour_travel.document_type_4
+#: model:document.type,name:tour_travel.document_type_4
+msgid "Driving License"
+msgstr "Giấy phép lái xe"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_duration
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_duration
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_duration
+msgid "Duration (in days)"
+msgstr "Thời gian (ngày)"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_duration
+msgid "Duration in days"
+msgstr "Thời gian (ngày)"
+
+#. module: tour_travel
+#: model:document.type,description:tour_travel.document_type_2
+#: model:document.type,name:tour_travel.document_type_2
+msgid "Election Card"
+msgstr "Giấy tờ khác"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_email
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_email
+msgid "Email"
+msgstr "Email"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Đồ thuật soạn thảo email"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:153
+#: code:addons/tour_travel/models/passport_booking.py:158
+#: code:addons/tour_travel/models/passport_booking.py:179
+#: code:addons/tour_travel/models/visa_booking.py:93
+#: code:addons/tour_travel/models/visa_booking.py:158
+#: code:addons/tour_travel/models/visa_booking.py:169
+#: code:addons/tour_travel/models/visa_booking.py:173
+#: code:addons/tour_travel/models/visa_booking.py:178
+#: code:addons/tour_travel/models/visa_booking.py:187
+#: code:addons/tour_travel/models/visa_booking.py:197
+#: code:addons/tour_travel/models/visa_booking.py:201
+#, python-format
+msgid "Error!"
+msgstr "Lỗi!"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/tour.py:127
+#: code:addons/tour_travel/models/tour_date.py:106
+#, python-format
+msgid "Error! Destination From and To must not be the same."
+msgstr "Lỗi! Địa điểm khởi hành và đích đến phải khác nhau."
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Expire"
+msgstr "Hết hạn"
+
+#. module: tour_travel
+#: selection:passport,state:0
+#: selection:visa,state:0
+msgid "Expired"
+msgstr "Hết hạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_expiry_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_expiry_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_expiry_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_expiry_date
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "Expiry Date"
+msgstr "Ngày hết hạn"
+
+#. module: tour_travel
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "Nữ"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Finish"
+msgstr "Hoàn tất"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_form_view
+msgid "Force to expire"
+msgstr "Hết hạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_from_destination
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_from_destination
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "From"
+msgstr "Từ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_gender
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_gender
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_gender
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Gifts & Other Inclusion"
+msgstr "Quà tặng & Bao gồm khác"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Group By..."
+msgstr "Nhóm theo..."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_holder_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_partner_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_holder_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_partner_id
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Holder"
+msgstr "Người đứng tên"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport.py:55
+#: code:addons/tour_travel/models/passport_booking.py:81
+#: code:addons/tour_travel/models/visa.py:39
+#: code:addons/tour_travel/models/visa_booking.py:79
+#, python-format
+msgid "Holder %s cannot be company!"
+msgstr "Người mang %s không thể là một công ty!"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_partner_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_hotel_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_hotel_id
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_is_hotel
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_is_hotel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_hotel_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_hotel_id
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Hotel"
+msgstr "Khách sạn"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_hotel_class
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_hotel_class_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_hotel_class_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_hotel_class_id
+#: model:ir.ui.view,arch_db:tour_travel.hotel_class_tree_view
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Hotel Class"
+msgstr "Hạng khách sạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_hotel_img1
+msgid "Hotel Image 1"
+msgstr "Hình ảnh 1"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_hotel_img2
+msgid "Hotel Image 2"
+msgstr "Hình ảnh 2"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_hotel_img3
+msgid "Hotel Image 3"
+msgstr "Hình ảnh 3"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_form_view
+msgid "Hotel Images"
+msgstr "Hình khách sạn"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.hotel_action
+#: model:ir.model,name:tour_travel.model_hotel_hotel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_hotel_ids
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_hotel_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_date_hotel_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_ids
+#: model:ir.ui.menu,name:tour_travel.hotel_hotel_information_menu
+#: model:ir.ui.view,arch_db:tour_travel.hotel_form_view
+#: model:ir.ui.view,arch_db:tour_travel.hotel_tree_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_destination_line_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_destination_line_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Hotel Information"
+msgstr "Thông tin khách sạn"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.hotel_reservation_action
+#: model:ir.model,name:tour_travel.model_hotel_reservation
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_hotel_reservation_id
+#: model:ir.model.fields,field_description:tour_travel.field_purchase_order_hotel_reservation_id
+#: model:ir.ui.menu,name:tour_travel.hotel_reservation_menu
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_tree_view
+msgid "Hotel Reservation"
+msgstr "Đặt phòng"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_hotel_reservation_line
+msgid "Hotel Reservation Line"
+msgstr "Chi tiết đặt phòng khách sạn"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Hotel Reservation Lines"
+msgstr "Chi tiết đặt phòng khách sạn"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:172
+#, python-format
+msgid "Hotel Reservation booked"
+msgstr "Phòng khách sạn đã được đặt"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:233
+#, python-format
+msgid "Hotel Reservation cancelled"
+msgstr "Đặt phòng đã bị hủy"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:223
+#, python-format
+msgid "Hotel Reservation checked out"
+msgstr "Phòng đã check out"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:218
+#, python-format
+msgid "Hotel Reservation confirmed"
+msgstr "Đặt phòng đã được xác nhận"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:228
+#, python-format
+msgid "Hotel Reservation done"
+msgstr "Đặt phòng hoàn thành"
+
+#. module: tour_travel
+#: selection:product.template,specific:0
+msgid "Hotel Room"
+msgstr "Phòng khách sạn"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_hotel_room
+msgid "Hotel Room Information"
+msgstr "Thông tin phòng khách sạn"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_hotel_service
+msgid "Hotel Service Information"
+msgstr "Thông tin dịch vụ khách sạn"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.hotel_class_action
+#: model:ir.ui.menu,name:tour_travel.hotel_class_menu
+#: model:ir.ui.view,arch_db:tour_travel.hotel_class_form_view
+msgid "Hotel Type"
+msgstr "Loại khách sạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_hotel_hotel_partner_id
+msgid "Hotel information in details"
+msgstr "Thông tin khách sạn"
+
+#. module: tour_travel
+#: model:ir.ui.menu,name:tour_travel.hotel_hotel_config_menu
+#: model:ir.ui.menu,name:tour_travel.hotel_hotel_root_menu
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Hotels"
+msgstr "Khách sạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_id
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_id
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_id
+#: model:ir.model.fields,field_description:tour_travel.field_report_tour_travel_report_attendee_declaration_id
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_partner_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_attendee_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_id
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_id
+#: model:ir.model.fields,field_description:tour_travel.field_transport_id
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_id
+msgid "ID"
+msgstr "ID"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "INCLUSIONS"
+msgstr "BAO GỒM TRONG TOUR"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "ITINERARIES"
+msgstr "HÀNH TRÌNH"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.visa_form_view
+msgid "Image"
+msgstr "Ảnh"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,help:tour_travel.tour_date_2_account_analytic_action
+msgid "In Odoo, sale orders and projects are implemented using\n"
+"					analytic\n"
+"					accounts. You can track costs and revenues to analyse\n"
+"					your margins\n"
+"					easily."
+msgstr "Trong hệ thống, đơn hàng và dự án được triển khai dùng làm\n"
+"					tài khoản\n"
+"					phân tích. Bạn có thể theo dõi chi phí và doanh thu để\n"
+"					tính ra lợi nhuận của bạn\n"
+"					dễ dàng."
+
+#. module: tour_travel
+#: model:tour.type,name:tour_travel.tour_type_inter
+msgid "International"
+msgstr "Tour quốc tế"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Invoice"
+msgstr "Hoá đơn"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+msgid "Invoice Exception"
+msgstr "Hóa đơn ngoại lệ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_invoice_ids
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_invoice_ids
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_invoice_ids
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Invoices"
+msgstr "Hoá đơn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_is_tour_booking
+msgid "Is Tour Booking?"
+msgstr "Dùng để đặt Tour?"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_issue_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_issue_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_issue_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_issue_date
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "Issue Date"
+msgstr "Ngày cấp"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+msgid "Issue Passport"
+msgstr "Cấp hộ chiếu"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Issue Visa"
+msgstr "Cấp Visa"
+
+#. module: tour_travel
+#: selection:passport.booking,state:0
+#: selection:visa.booking,state:0
+msgid "Issued"
+msgstr "Đã cấp"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Itinerary"
+msgstr "Hành trình"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_document_type___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_passport___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_report_tour_travel_report_attendee_declaration___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_transport___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_visa___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document___last_update
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_passport_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_transport_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_write_uid
+#: model:ir.model.fields,field_description:tour_travel.field_visa_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_class_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_passport_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_transport_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_write_date
+#: model:ir.model.fields,field_description:tour_travel.field_visa_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Đầu mối/Cơ hội"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_lead
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_lead_count
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Leads"
+msgstr "Các đầu mối"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_lead_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_oppor_ids
+msgid "Leads/Opportunities"
+msgstr "Leads/Opportunities"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_lunch
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_lunch
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_lunch
+msgid "Lunch included?"
+msgstr "Bao gồm ăn trưa?"
+
+#. module: tour_travel
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "Nam"
+
+#. module: tour_travel
+#: model:res.groups,name:tour_travel.group_tour_travel_manager
+msgid "Manager"
+msgstr "Người quản lý"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_image_medium
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_image_medium
+msgid "Medium-sized photo"
+msgstr "Ảnh cỡ trung"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_passport_image_medium
+#: model:ir.model.fields,help:tour_travel.field_tour_program_image_medium
+msgid "Medium-sized photo of the employee. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Ảnh cỡ trung của nhân viên. Kích thước sẽ tự động thay đổi thành 128x128 px và giữ nguyên tỉ lệ. Hình này xuất hiện khi xem ở dạng form hoặc kanban."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_mobile
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Monthly Expire"
+msgstr "Hết hạn hàng tháng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+msgid "Monthly Issue"
+msgstr "Ngày cấp theo tháng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+msgid "Monthly Orders"
+msgstr "Đơn hàng theo tháng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Moving"
+msgstr "Di chuyển"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+msgid "My"
+msgstr "Của Tôi"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_name
+#: model:ir.model.fields,field_description:tour_travel.field_document_type_name
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_type_name
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_name
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_name
+#: model:ir.model.fields,field_description:tour_travel.field_transport_name
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_name
+#: model:ir.ui.view,arch_db:tour_travel.hotel_search_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_crm_new_quotation_inherit
+msgid "New Quotation"
+msgstr "Báo giá mới"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,help:tour_travel.tour_date_2_account_analytic_action
+msgid "No activity yet on this account."
+msgstr "Chưa có hoạt động nào ở tài khoản này"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_days
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_days
+msgid "No. Of Days"
+msgstr "Số ngày"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_no_of_day
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "No. of Days"
+msgstr "Số ngày"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_days
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_days
+msgid "No. of Nights"
+msgstr "Số đêm"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_no_of_room
+msgid "No. of Rooms"
+msgstr "Số lượng phòng"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_notes
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: tour_travel
+#: selection:tour.date,state:0
+msgid "Open"
+msgstr "Mở"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Open Tour Date"
+msgstr "Mở Tour Date"
+
+#. module: tour_travel
+#: model:res.groups,name:tour_travel.group_tour_travel_user
+msgid "Operator"
+msgstr "Tổ chức Tour"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_oppor_count
+msgid "Opportunies"
+msgstr "Cơ hội"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Opportunities"
+msgstr "Các cơ hội"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_tour_date_transport_distance
+#: model:ir.model.fields,help:tour_travel.field_tour_transport_distance
+msgid "Optional! The estimated distance between the From and the To above"
+msgstr "Không bắt buộc! Khoảng cách ước tính giữa Điểm khởi hàng và Điểm đến"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_date_order
+msgid "Order Date"
+msgstr "Ngày đặt hàng"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/sale_order.py:81
+#, python-format
+msgid "Order Date must NOT be later than the Booking Deadline of the the tour date."
+msgstr "Ngày xác nhận đặt  KHÔNG được trễ hơn hạn chót đặt tour của ngày tour."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/sale_order.py:93
+#, python-format
+msgid "Order Date must be before Booking Deadline"
+msgstr "Ngày đặt phải trước Hạn chót Đặt"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:186
+#, python-format
+msgid "Order Date must be before the booking deadline of tour date."
+msgstr "Ngày đặt phải trước ngày hết hạn đặt tour."
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Orders & Invoices"
+msgstr "Đơn hàng & Hóa đơn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_original_copy
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_original_copy
+msgid "Original Copy"
+msgstr "Bản gốc Bản sao"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Other"
+msgstr "Khác"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "PASSPORT INFORMATION"
+msgstr "THÔNG TIN HỘ CHIẾU"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "PERSONAL DECLARATION"
+msgstr "TỜ KHAI CÁ NHÂN"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_report_attendee_declaration_partner_ids
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.passport_action
+#: model:ir.model,name:tour_travel.model_passport
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_passport_ids
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_passport_ids
+#: model:ir.ui.menu,name:tour_travel.menu_passport
+#: model:ir.ui.menu,name:tour_travel.passport_menu
+#: model:ir.ui.view,arch_db:tour_travel.passport_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_tree_view
+msgid "Passport"
+msgstr "Hộ chiếu"
+
+#. module: tour_travel
+#: model:ir.ui.menu,name:tour_travel.menu_passport_visa_config_menu
+msgid "Passport & Visa"
+msgstr "Hộ chiếu & Visa"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.passport_booking_action
+#: model:ir.model,name:tour_travel.model_passport_booking
+#: model:ir.model.fields,field_description:tour_travel.field_ir_attachment_passport_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_document_passport_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_passport_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_passport_booking_id
+#: model:ir.ui.menu,name:tour_travel.passport_booking_menu
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_calendar_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_graph_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_tree_view
+msgid "Passport Booking"
+msgstr "Đăng ký hộ chiếu"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_passport_booking_document
+msgid "Passport Booking Document"
+msgstr "Tài liệu đăng ký hộ chiếu"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:165
+#, python-format
+msgid "Passport Booking approved"
+msgstr "Đặt hẹn Hộ Chiếu đã được chấp nhận"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:170
+#, python-format
+msgid "Passport Booking cancelled"
+msgstr "Đặt Hộ Chiếu đã bị hủy"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:144
+#, python-format
+msgid "Passport Booking confirmed"
+msgstr "Đặt Hộ Chiếu đã được xác nhận"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:187
+#, python-format
+msgid "Passport Booking issued"
+msgstr "Đặt Hộ Chiếu được ghi nhận"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:160
+#, python-format
+msgid "Passport Booking verified"
+msgstr "Đặt Hộ Chiếu được xác nhận"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_passport_expiry_date
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_passport_expiry_date
+msgid "Passport Expiry Date"
+msgstr "Ngày hết hạn hộ chiếu"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+msgid "Passport Information"
+msgstr "Thông tin hộ chiếu"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_passport_isue_date
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_passport_isue_date
+msgid "Passport Issue Date"
+msgstr "Ngày cấp hộ chiếu"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_passport_number
+#: model:ir.model.fields,field_description:tour_travel.field_passport_name
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_passport_number
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_passport_number
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_passport_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_passport_id
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Passport Number"
+msgstr "Số hộ chiếu"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:179
+#, python-format
+msgid "Passport Number must be unique!"
+msgstr "Số hộ chiếu không được trùng!"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_product_id
+msgid "Passport Product"
+msgstr "Sản phẩm dịch vụ hộ chiếu"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:93
+#, python-format
+msgid "Passport does not match the customer. It may belong to another customer!."
+msgstr "Số hộ chiếu không khớp với khách hàng. Nó có thể thuộc về một khách hàng khác!."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:158
+#: code:addons/tour_travel/models/visa_booking.py:169
+#: code:addons/tour_travel/models/visa_booking.py:187
+#: code:addons/tour_travel/models/visa_booking.py:197
+#, python-format
+msgid "Passport has expired."
+msgstr "Hộ Chiếu đã hết hạn."
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_partner_inherit_form
+msgid "Passports"
+msgstr "Hộ Chiếu"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_image
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_image
+msgid "Photo"
+msgstr "Ảnh"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:158
+#: code:addons/tour_travel/models/visa_booking.py:178
+#, python-format
+msgid "Please make an attachment for document type '%s'."
+msgstr "Vui lòng bổ sung đính kèm cho loại giấy tờ '%s'."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:153
+#: code:addons/tour_travel/models/visa_booking.py:173
+#, python-format
+msgid "Please make attachment."
+msgstr "Vui lòng bổ sung đính kèm."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_pricelist_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_pricelist_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_pricelist_id
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_hotel_reservation_pricelist_id
+msgid "Pricelist for current hotel reservation."
+msgstr "Bảng giá cho đặt phòng hiện tại."
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_form_view
+msgid "Print"
+msgstr "In"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_product_product
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_carrier_line
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_carrier_line
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_product_id
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_product_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_product_name
+msgid "Product Name"
+msgstr "Tên sản phẩm"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_product_uom
+msgid "Product UoM"
+msgstr "Đơn vị tính"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_product_ids
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_product_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_date_product_ids
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+#: model:ir.ui.view,arch_db:tour_travel.transport_line_form_view
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Programs"
+msgstr "Chương trình"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_transport_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_transport_id
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#. module: tour_travel
+#: model:ir.ui.menu,name:tour_travel.transport_menu
+msgid "Providers"
+msgstr "Nhà cung cấp"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_purchase_order
+#: model:ir.model,name:tour_travel.model_purchase_order
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_purchase_order_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_purchase_order_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_rfq_ids
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Purchase Order"
+msgstr "Đơn hàng"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Dòng hàng Đơn hàng Mua"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Purchases"
+msgstr "Mua hàng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "QUOTATION SUMMARY DETAILS"
+msgstr "TÓM TẮT BÁO GIÁ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_product_uom_qty
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_product_uom_qty
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_stock_quant
+msgid "Quants"
+msgstr "Số lượng"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_tour_quotation
+#: model:ir.model,name:tour_travel.model_sale_order
+msgid "Quotation"
+msgstr "Báo giá"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.tour_quotation_action
+#: model:ir.ui.menu,name:tour_travel.tour_quotations_menu
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Quotations"
+msgstr "Báo giá"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "RFQs"
+msgstr "YCBG"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_available_seat
+msgid "Remaining Seats"
+msgstr "Số chỗ còn"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Request for Quotation"
+msgstr "Yêu cầu Báo giá"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_rfq
+msgid "Requests for Quotation"
+msgstr "Yêu cầu Báo giá"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Required Documents"
+msgstr "Tài liệu yêu cầu"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_reservation_line
+msgid "Reservation Lines"
+msgstr "Chi tiết đặt"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_name
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+msgid "Reservation No."
+msgstr "Đơn đặt số"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Reservation Order"
+msgstr "Đơn đặt"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Residual Amount"
+msgstr "Số tiền còn lại"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_user_id
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_user_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_user_id
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,help:tour_travel.tour_date_2_account_analytic_action
+msgid "Revenues will be created automatically when you create customer\n"
+"					invoices. Customer invoices can be created based on sale orders\n"
+"					(fixed price invoices), on timesheets (based on the work done) or\n"
+"					on expenses (e.g. reinvoicing of travel costs)."
+msgstr "Doanh thu sẽ được tạo tự động khi bạn tạo hóa đơn \n"
+"					khách hàng. Hóa đơn khách hàng có thể được tạo dựa trên đơn hàng\n"
+"					(giá trị hóa đơn cố định), theo thời gian biểu (theo khối lượng hoàn thành) hoặc\n"
+"					theo chi phí (lập hóa đơn theo nội dung phát sinh)."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_hotel_room_ids
+#: model:ir.ui.view,arch_db:tour_travel.hotel_form_view
+msgid "Room Information"
+msgstr "Thông tin phòng"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_room_type_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_room_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_room_id
+#: model:ir.ui.view,arch_db:tour_travel.hotel_room_form_view
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Room Type"
+msgstr "Loại phòng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Room Types"
+msgstr "Loại phòng"
+
+#. module: tour_travel
+#: selection:tour.date,state:0
+msgid "Running"
+msgstr "Đã xuất phát"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_sale_price
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_price
+#: model:ir.model.fields,field_description:tour_travel.field_transport_carrier_line_sale_price
+msgid "Sale Price"
+msgstr "Giá bán"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_sale_order_ids
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_sale_order_ids
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Sales Order"
+msgstr "Đơn bán hàng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Sales Order & Invoices"
+msgstr "Đơn hàng & Hóa đơn"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.passport_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+msgid "Search Hotel Reservation"
+msgstr "Tìm đặt phòng khách sạn"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+msgid "Search Tour Date"
+msgstr "Tìm ngày khởi hành"
+
+#. module: tour_travel
+#: selection:hotel.reservation,state:0
+msgid "Sent"
+msgstr "Đã gửi"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Sent to Hotel"
+msgstr "Gửi cho khách sạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_service_service_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_price
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_price
+msgid "Service Cost"
+msgstr "Phí dịch vụ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_hotel_hotel_service_ids
+#: model:ir.ui.view,arch_db:tour_travel.hotel_form_view
+msgid "Service Information"
+msgstr "Thông tin dịch vụ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_transport_partner_id
+msgid "Service Provider"
+msgstr "Nhà cung cấp dịch vụ"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_passport_image_small
+#: model:ir.model.fields,help:tour_travel.field_tour_program_image_small
+msgid "Small-sized image of this contact. It is automaticallyresized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Ảnh cỡ nhỏ cho liên lạc này. Nó được tự động chỉnh kích thước ảnh về 64x64px, với tỉ lệ được giữ nguyên. Dùng trường này ở bất cứ đâu cần một ảnh nhỏ."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_image_small
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_image_small
+msgid "Small-sized photo"
+msgstr "Ảnh cỡ nhỏ"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_specific
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_specific
+msgid "Specific"
+msgstr "Đặc thù"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Start Tour Date"
+msgstr "Bắt đầu ngày khởi hành Tour"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_destination_state_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_state
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_state_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_state_id
+msgid "State"
+msgstr "Bang"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_passport_booking_state
+#: model:ir.model.fields,field_description:tour_travel.field_passport_state
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_state
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_state
+#: model:ir.model.fields,field_description:tour_travel.field_visa_state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: tour_travel
+#: model:ir.actions.server,name:tour_travel.ir_cron_startour_date_action_ir_actions_server
+#: model:ir.cron,cron_name:tour_travel.ir_cron_startour_date_action
+#: model:ir.cron,name:tour_travel.ir_cron_startour_date_action
+msgid "Strat Tour Date"
+msgstr "Strat Tour Date"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_price_subtotal
+msgid "Subtotal"
+msgstr "Thành tiền"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_hotel_id
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+msgid "Supplier"
+msgstr "Nhà cung cấp"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_supplier_ref
+msgid "Supplier Reference"
+msgstr "Tham chiếu nhà cung cấp"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "TRANSPORTATIONS"
+msgstr "DI CHUYỂN"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_price_tax
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_amount_tax
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_tax_ids
+msgid "Taxes"
+msgstr "Các loại Thuế"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_form_view
+msgid "Terms and conditions..."
+msgstr "Điều khoản và điều kiện..."
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_hotel_reservation_amount_untaxed
+msgid "The amount without tax."
+msgstr "Tổng tiền trước thuế."
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_tour_date_transport_time
+#: model:ir.model.fields,help:tour_travel.field_tour_transport_time
+msgid "The estimated time to travel from the From to the To"
+msgstr "Thời gian dự kiến để đi từ điểm bắt đầu đến điểm kết thúc"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa.py:51
+#, python-format
+msgid "The passport does not match the customer. It may belong to another customer!."
+msgstr "Hộ chiếu không hợp lệ. Nó có thể thuộc về một khách hàng khác!."
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_tour_date_tour_id
+msgid "The product that links to this tour date"
+msgstr "Sản phẩm liên kết đến tour date này"
+
+#. module: tour_travel
+#: sql_constraint:transport:0
+msgid "The selected Partner is already a transport provider!"
+msgstr "Đối tác được chọn đã là một nhà cung cấp vận tải!"
+
+#. module: tour_travel
+#: sql_constraint:hotel.hotel:0
+msgid "The selected partner is already a hotel!"
+msgstr "Đối tác được chọn đã là một khách sạn!"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_hotel_reservation_amount_tax
+msgid "The tax amount."
+msgstr "Tổng tiền thuế."
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_hotel_reservation_amount_total
+msgid "The total amount."
+msgstr "Tổng tiền."
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_passport_image
+msgid "This field holds the image used as photo for the holder, limited to 1024x1024px."
+msgstr "This field holds the image used as photo for the holder, limited to 1024x1024px."
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_tour_program_image
+msgid "This field holds the image used as photo for the tour program, limited to 1024x1024px."
+msgstr "This field holds the image used as photo for the tour program, limited to 1024x1024px."
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_time
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_time
+msgid "Time (Hrs)"
+msgstr "Thời gian (giờ)"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_name
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_to_destination
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_to_destination
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "To"
+msgstr "Đến"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_amount_total
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_price_total
+msgid "Total"
+msgstr "Tổng"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Total Amount"
+msgstr "Tổng số tiền"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_total_seat
+msgid "Total Seats"
+msgstr "Tổng số người"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_crm_lead_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_crm_opportunity_report_product_id
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_tour_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_tour_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_tour_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_tour_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_transport_tour_id
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+#: selection:product.template,specific:0
+msgid "Tour"
+msgstr "Tour"
+
+#. module: tour_travel
+#: model:ir.ui.menu,name:tour_travel.menu_tour_travel_root
+msgid "Tour & Travel"
+msgstr "Du lịch & Lữ hành"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_attendee
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_tour_attendee_ids
+msgid "Tour Attendee"
+msgstr "Người tham gia"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_booking_inherit_form
+msgid "Tour Attendees"
+msgstr "Người tham gia Tour"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.act_tour_date_2_tour_booking
+#: model:ir.actions.act_window,name:tour_travel.tour_booking_action
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_sale_order_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_booking_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_quotation_ids
+#: model:ir.ui.menu,name:tour_travel.tour_booking_menu
+#: model:ir.ui.menu,name:tour_travel.tour_booking_root_menu
+msgid "Tour Booking"
+msgstr "Đặt tour"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Tour Bookings"
+msgstr "Đặt tour"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.tour_date_action
+#: model:ir.model,name:tour_travel.model_tour_date
+#: model:ir.model.fields,field_description:tour_travel.field_account_move_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_crm_lead_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_crm_opportunity_report_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_purchase_order_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_stock_move_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_stock_picking_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_name
+#: model:ir.model.fields,field_description:tour_travel.field_tour_attendee_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_tour_date_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_transport_tour_date_id
+#: model:ir.ui.menu,name:tour_travel.tour_date_menu
+#: model:ir.ui.view,arch_db:tour_travel.hotel_reservation_search_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_booking_inherit_search
+#: model:ir.ui.view,arch_db:tour_travel.tour_crm_lead_inherit_search
+#: model:ir.ui.view,arch_db:tour_travel.tour_crm_oppor_inherit_search
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_tree_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_purchase_order_inherit_search
+msgid "Tour Date"
+msgstr "Tour Date"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_tour_date_ids
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_tour_date_ids
+msgid "Tour Date Code"
+msgstr "Mã Tour Date"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+msgid "Tour Date Code."
+msgstr "Tour Date Code."
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_date_destination
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_destination_line_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Tour Date Destination"
+msgstr "Điểm đến của Tour Date"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_date_destination_hotel
+msgid "Tour Date Destination Hotel"
+msgstr "Khách sạn ở điểm đến của Tour Date"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_destination_hotel_tour_date_destination_id
+msgid "Tour Date Destination Line"
+msgstr "Chi tiết điểm đến của Tour Date"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_date_product
+msgid "Tour Date Product"
+msgstr "Sản phẩm Tour Date"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_date_product_variant
+msgid "Tour Date Product Variant"
+msgstr "Biến thể sản phẩm Tour Date"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_date_program_line
+msgid "Tour Date Program Line"
+msgstr "Chi tiết chương trình Tour Date"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_date_program_ids
+msgid "Tour Date Programs"
+msgstr "Chương trình Tour Date"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_date_transport
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_transport_form_view
+msgid "Tour Date Transport"
+msgstr "Phương tiện Tour Date"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_destination
+#: model:ir.model,name:tour_travel.model_tour_destination
+#: model:ir.ui.view,arch_db:tour_travel.destination_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_destination_line_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_destination_tree_view
+msgid "Tour Destination"
+msgstr "Đích đến"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_destination_hotel
+msgid "Tour Destination Hotel"
+msgstr "Khách sạn ở điểm đến của Tour"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_tour_destination_id
+msgid "Tour Destination Line"
+msgstr "Chi tiết điểm đến của Tour"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_tour_destination_ids
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_tour_destination_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_date_destination_ids
+msgid "Tour Destinations"
+msgstr "Điểm đến Tour"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Tour Duration (in days):"
+msgstr "Sô ngày:"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_destination_hotel_tour_id
+msgid "Tour Information"
+msgstr "Thông tin tour"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_product
+msgid "Tour Product"
+msgstr "Sản phẩm Tour"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.tour_program_action
+#: model:ir.model,name:tour_travel.model_tour_program
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_program_line_tour_program_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_program_line_tour_program_id
+#: model:ir.ui.view,arch_db:tour_travel.tour_program_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_program_tree_view
+msgid "Tour Program"
+msgstr "Chương trình tour"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_program_line
+msgid "Tour Program Line"
+msgstr "Chi tiết chương trình Tour"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_tour_program_ids
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_tour_program_ids
+#: model:ir.ui.menu,name:tour_travel.tour_program_menu
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Tour Programs"
+msgstr "Chương trình tour"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_tour_transport
+#: model:ir.ui.view,arch_db:tour_travel.tour_transport_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_transport_tree_view
+msgid "Tour Transport"
+msgstr "Phương tiện Tour"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.tour_type_action
+#: model:ir.model,name:tour_travel.model_tour_type
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_tour_type
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_tour_type
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_type
+#: model:ir.ui.menu,name:tour_travel.tour_type_menu
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_search_view
+msgid "Tour Type"
+msgstr "Loại tour"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/sale_order.py:113
+#, python-format
+msgid "Tour Variant %s does not belong Tour Date %s."
+msgstr "Biến thể Tour %s không thuộc về Tour Date %s."
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.tour_variant_action
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_variant_ids
+#: model:ir.ui.menu,name:tour_travel.tour_variant
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "Tour Variants"
+msgstr "Biến thể tour"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Tour:"
+msgstr "Tour:"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.tour_action
+#: model:ir.ui.menu,name:tour_travel.tour_config_menu
+#: model:ir.ui.menu,name:tour_travel.tour_menu
+#: model:ir.ui.menu,name:tour_travel.tour_root_menu
+msgid "Tours"
+msgstr "Các hướng dẫn"
+
+#. module: tour_travel
+#: model:ir.module.category,name:tour_travel.module_category_tour_travel
+msgid "Tours and Travels"
+msgstr "Du lịch và lữ hành"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.transport_action
+#: model:ir.model.fields,field_description:tour_travel.field_res_partner_is_transport
+#: model:ir.model.fields,field_description:tour_travel.field_res_users_is_transport
+msgid "Transport"
+msgstr "Vận tải"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_transport_carrier_line
+#: model:ir.ui.view,arch_db:tour_travel.transport_line_form_view
+msgid "Transport Carrier Line"
+msgstr "Chi tiết phương tiện vận tải"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_product_product_transport_ids
+#: model:ir.model.fields,field_description:tour_travel.field_product_template_transport_ids
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_tour_date_transport_ids
+#: model:ir.model.fields,field_description:tour_travel.field_transport_line_transport_id
+#: model:ir.ui.view,arch_db:tour_travel.transport_tree_view
+msgid "Transport Information"
+msgstr "Thông tin di chuyển"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_transport_line
+#: model:ir.ui.view,arch_db:tour_travel.transport_line_form_view
+#: model:ir.ui.view,arch_db:tour_travel.transport_line_tree_view
+msgid "Transport Line"
+msgstr "Chi tiết vận chuyển"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_transport
+#: model:ir.ui.view,arch_db:tour_travel.transport_form_view
+msgid "Transport Provider"
+msgstr "Nhà cung cấp vận tải"
+
+#. module: tour_travel
+#: selection:product.template,specific:0
+msgid "Transportation"
+msgstr "Dịch vụ vận tải"
+
+#. module: tour_travel
+#: model:ir.ui.menu,name:tour_travel.transport_config_menu
+#: model:ir.ui.menu,name:tour_travel.transport_root_menu
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+#: model:ir.ui.view,arch_db:tour_travel.tour_product_template_inherit_form
+msgid "Transports"
+msgstr "Di chuyển"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.hotel_search_view
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: tour_travel
+#: model:ir.model.fields,help:tour_travel.field_tour_date_destination_hotel_auto_booking
+#: model:ir.model.fields,help:tour_travel.field_tour_destination_hotel_auto_booking
+msgid "Uncheck this box to disable automatic hotel reservation"
+msgstr "Bỏ ô này nếu bạn muốn tắt tự động tạo đơn đặt phòng khách sạn"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_line_price
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_product_uom
+#: model:ir.model.fields,field_description:tour_travel.field_tour_date_product_variant_uom_id
+#: model:ir.model.fields,field_description:tour_travel.field_tour_product_product_uom
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_reservation_amount_untaxed
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Untaxed Amount"
+msgstr "Giá trị trước thuế"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/tour.py:127
+#, python-format
+msgid "User Error"
+msgstr "Lỗi người dùng"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:171
+#: code:addons/tour_travel/models/hotel_reservation.py:182
+#: code:addons/tour_travel/models/hotel_reservation.py:184
+#: code:addons/tour_travel/models/hotel_reservation.py:186
+#: code:addons/tour_travel/models/passport.py:49
+#: code:addons/tour_travel/models/passport.py:55
+#: code:addons/tour_travel/models/passport_booking.py:81
+#: code:addons/tour_travel/models/passport_booking.py:104
+#: code:addons/tour_travel/models/sale_order.py:78
+#: code:addons/tour_travel/models/sale_order.py:81
+#: code:addons/tour_travel/models/sale_order.py:83
+#: code:addons/tour_travel/models/sale_order.py:93
+#: code:addons/tour_travel/models/sale_order.py:102
+#: code:addons/tour_travel/models/sale_order.py:113
+#: code:addons/tour_travel/models/tour_date.py:106
+#: code:addons/tour_travel/models/tour_date.py:395
+#: code:addons/tour_travel/models/tour_date.py:397
+#: code:addons/tour_travel/models/visa.py:39
+#: code:addons/tour_travel/models/visa.py:51
+#: code:addons/tour_travel/models/visa_booking.py:79
+#: code:addons/tour_travel/models/visa_booking.py:119
+#, python-format
+msgid "User Error!"
+msgstr "Lỗi người dùng!"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+msgid "VISA INFORMATION"
+msgstr "THÔNG TIN VISA"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: selection:passport.booking,state:0
+#: selection:visa.booking,state:0
+msgid "Verified"
+msgstr "Đã thẩm định"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.passport_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Verify Document"
+msgstr "Thẩm định tài liệu"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.visa_action
+#: model:ir.model,name:tour_travel.model_visa
+#: model:ir.model.fields,field_description:tour_travel.field_passport_visa_ids
+#: model:ir.ui.menu,name:tour_travel.menu_visa
+#: model:ir.ui.menu,name:tour_travel.visa_menu
+#: model:ir.ui.view,arch_db:tour_travel.passport_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_tree_view
+msgid "Visa"
+msgstr "Visa"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.visa_booking_action
+#: model:ir.model,name:tour_travel.model_visa_booking
+#: model:ir.model.fields,field_description:tour_travel.field_ir_attachment_visa_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_sale_order_visa_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_document_visa_booking_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_visa_booking_id
+#: model:ir.ui.menu,name:tour_travel.visa_booking_menu
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_calendar_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_graph_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_tree_view
+msgid "Visa Booking"
+msgstr "Đăng ký Visa"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_visa_booking_document
+msgid "Visa Booking Document"
+msgstr "Tài liệu đăng ký Visa"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:189
+#, python-format
+msgid "Visa Booking approved"
+msgstr "Đặt Visa được chấp nhận"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:161
+#, python-format
+msgid "Visa Booking confirmed"
+msgstr "Đặt Visa được xác nhận"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:213
+#, python-format
+msgid "Visa Booking issued"
+msgstr "Đăng kí cấp VISA"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:180
+#, python-format
+msgid "Visa Booking verified"
+msgstr "Đặt Visa xác nhận"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_visa_visa_img
+msgid "Visa Image"
+msgstr "Ảnh Visa"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_form_view
+msgid "Visa Information"
+msgstr "Thông tin Visa"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_visa_number
+#: model:ir.model.fields,field_description:tour_travel.field_visa_name
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_doc
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+msgid "Visa Number"
+msgstr "Số Visa"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/visa_booking.py:201
+#: sql_constraint:visa:0
+#, python-format
+msgid "Visa Number must be unique per country!"
+msgstr "Số visa phải duy nhất đối với mỗi quốc gia!"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_product_id
+msgid "Visa Product"
+msgstr "Sản phẩm dịch vụ visa"
+
+#. module: tour_travel
+#: model:ir.actions.act_window,name:tour_travel.visa_type_action
+#: model:ir.model,name:tour_travel.model_visa_type
+#: model:ir.model.fields,field_description:tour_travel.field_visa_booking_visa_type_id
+#: model:ir.model.fields,field_description:tour_travel.field_visa_type_id_6522
+#: model:ir.ui.menu,name:tour_travel.visa_type_menu
+#: model:ir.ui.view,arch_db:tour_travel.visa_booking_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_search_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_type_form_view
+#: model:ir.ui.view,arch_db:tour_travel.visa_type_tree_view
+msgid "Visa Type"
+msgstr "Loại visa"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/tour_date.py:397
+#, python-format
+msgid "You can not delete a done tour date!"
+msgstr "Bạn không thể xóa tour date đã xong!"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/tour_date.py:395
+#, python-format
+msgid "You can not delete a running tour date!"
+msgstr "Bạn không thể xóa tour date đang chạy!"
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/sale_order.py:83
+#, python-format
+msgid "You can only book a tour date whose state is open."
+msgstr "Bạn chỉ có thể đặt 1 tour date đang ở trạng thái mở."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:184
+#, python-format
+msgid "You can only check out a reservation whose state is open or running."
+msgstr "Bạn chỉ có thể check out một đặt phòng có trạng thái mở hoặc đang thực hiện."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport_booking.py:104
+#: code:addons/tour_travel/models/visa_booking.py:119
+#, python-format
+msgid "You can only delete records whose state is draft or cancelled."
+msgstr "Bạn chỉ có thể xóa các dữ liệu mà nó ở trạng thái Nháp hoặc Đã hủy."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:171
+#, python-format
+msgid "You cannot book a reservation which has no line."
+msgstr "Bạn không thể đặt phòng mà không có thông tin chi tiết."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/hotel_reservation.py:182
+#, python-format
+msgid "You cannot check out a reservation which has no Tour Date."
+msgstr "Bạn không thể check out một đặt phòng mà không có Tour Date."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/sale_order.py:78
+#, python-format
+msgid "You cannot confirm a tour booking which has no Tour Date."
+msgstr "Bạn không thể xác nhận một tour booking mà không có Tour Date."
+
+#. module: tour_travel
+#: code:addons/tour_travel/models/passport.py:49
+#, python-format
+msgid "You cannot have more than one passport available per partner: %s"
+msgstr "Bạn không thể có nhiều hơn một hộ chiếu có hiệu lực cho đối tác: %s"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.report_tour_booking
+msgid "day(s)"
+msgstr "ngày"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.tour_date_form_view
+msgid "describe the tour date..."
+msgstr "mô tả tour date..."
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_ir_attachment
+msgid "ir.attachment"
+msgstr "ir.attachment"
+
+#. module: tour_travel
+#: model:ir.model.fields,field_description:tour_travel.field_hotel_room_name
+msgid "name"
+msgstr "tên"
+
+#. module: tour_travel
+#: model:ir.ui.view,arch_db:tour_travel.attendee_declaration_form_view
+msgid "or"
+msgstr "hoặc"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_report_attendee_declaration
+msgid "report.attendee.declaration"
+msgstr "report.attendee.declaration"
+
+#. module: tour_travel
+#: model:ir.model,name:tour_travel.model_report_tour_travel_report_attendee_declaration
+msgid "report.tour_travel.report_attendee_declaration"
+msgstr "report.tour_travel.report_attendee_declaration"
+

@@ -1,6 +1,0 @@
-<odoo>
-  <data>
-     <menuitem name="Todo" id="menu_todo_root" sequence="15" />
-   	 <menuitem id="menu_todo" name="Todo" parent="menu_todo_root" action="todo_action"/>
-  </data>
-</odoo>

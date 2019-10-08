@@ -1,0 +1,92 @@
+<odoo>
+	<data>
+		<record id="fields_import_form_view" model="ir.ui.view">
+         <field name="name">fields_import.form</field>
+         <field name="model">import_adj.fields_import</field>
+         <field name="arch" type="xml">
+            <form string="fields_import">
+               <header>
+	               <!-- 
+	                  <button class="oe_highlight" type="object" string="Test_search" name="test_search"  />
+	                  <button class="oe_highlight" type="object" string="set_list_of_models" name="set_list_of_models"  />
+	                -->
+               </header>
+               <sheet>
+                  <group>
+                  		<field name="id_char"/>
+                  	 	<field name="name"/>
+                  	 	<field name="copy"/>
+						<field name="depends"/>
+						<field name="domain"/>
+						<field name="field_description"/>
+						<field name="groups"/>
+						<field name="help"/>
+						<field name="index"/>
+						<field name="model"/>
+						<field name="model_id"/>
+						<field name="modules"/>
+						<field name="on_delete"/>
+						<field name="readonly"/>
+						<field name="related"/>
+						<field name="relation"/>
+						<field name="relation_field"/>
+						<field name="relation_table"/>
+						<field name="required"/>
+						<field name="selectable"/>
+						<field name="selection"/>
+						<field name="size"/>
+						<field name="state"/>
+						<field name="store"/>
+						<field name="translate"/>
+						<field name="ttype"/>
+
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record id="fields_import_list_view" model="ir.ui.view">
+         <field name="name">fields_import.list</field>
+         <field name="model">import_adj.fields_import</field>
+         <field name="arch" type="xml">
+            <tree string="fields_import">
+               <field name="name"/>
+                  	 	<field name="id_char"/>
+                  	 	<field name="name"/>
+                  	 	<field name="copy"/>
+						<field name="depends"/>
+						<field name="domain"/>
+						<field name="field_description"/>
+						<field name="groups"/>
+						<field name="help"/>
+						<field name="index"/>
+						<field name="model"/>
+						<field name="model_id"/>
+						<field name="modules"/>
+						<field name="on_delete"/>
+						<field name="readonly"/>
+						<field name="related"/>
+						<field name="relation"/>
+						<field name="relation_field"/>
+						<field name="relation_table"/>
+						<field name="required"/>
+						<field name="selectable"/>
+						<field name="selection"/>
+						<field name="size"/>
+						<field name="state"/>
+						<field name="store"/>
+						<field name="translate"/>
+						<field name="ttype"/>
+            </tree>
+         </field>
+      </record>
+      <record id="fields_import_action" model="ir.actions.act_window">
+         <field name="name">fields_import</field>
+         <field name="res_model">import_adj.fields_import</field>
+         <field name="view_type">form</field>
+         <field name="view_mode">tree,form</field>
+         <field name="domain" />
+         <field name="context">{}</field>
+      </record>
+	</data>
+</odoo>
